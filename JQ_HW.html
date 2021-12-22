@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery Document</title>
+    <style>
+      img {
+        position: static;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">Pola Attya</h1>
+    <h2 style="text-align: center">lab2</h2>
+    <br /><br /><br /><br /><br />
+
+    <div style="text-align: center">
+      <img
+        src="https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/325/325466/man-walking-dog.jpg"
+        alt="Computer Man"
+        style="width: 200px; height: 200px"
+      />
+      <img
+        src="https://www.wbcsd.org/var/site/storage/images/overview/news-insights/general/news/wbcsd-to-support-the-task-force-on-nature-related-financial-disclosures-tnfd/150706-1-eng-GB/WBCSD-to-support-the-Task-Force-on-Nature-related-Financial-Disclosures-TNFD_i1140.jpg"
+        alt=""
+        style="width: 200px; height: 200px"
+      />
+      <img
+        src="https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/chickadee.jpg"
+        alt=""
+        style="width: 200px; height: 200px"
+      />
+      <img
+        src="https://static.scientificamerican.com/sciam/cache/file/4E0744CD-793A-4EF8-B550B54F7F2C4406_source.jpg"
+        alt=""
+        style="width: 200px; height: 200px"
+      />
+      <img
+        src="https://pbs.twimg.com/media/E9YJOcmWQAczMrY?format=jpg"
+        alt=""
+        style="width: 200px; height: 200px"
+      />
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.js"
+      integrity="sha512-/fOu6DkTvkdnquSvCrUDm/Qb8DLQJpLEVrUK00WpoPB1gL+xpkyktXwq9tvM9mrHLCdOJtZacXftdiV2UungvA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var mouseX = 0,
+          mouseY = 0;
+        $(document).mousemove(function (e) {
+          mouseX = e.pageX;
+          mouseY = e.pageY;
+        });
+        // cache the selector
+        var follower = $("#follower");
+        var img = $("img");
+        var xp = 0,
+          yp = 0;
+        img.click(function () {
+          $(this).css("position", "fixed");
+          var loop = setInterval(function () {
+            xp += mouseX - xp;
+            yp += mouseY - yp;
+            img.css({
+              left: xp,
+              top: yp,
+            });
+          });
+          img.click(function () {
+            location.reload();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
