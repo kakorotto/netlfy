@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Pola's Proj</title>
+  </head>
+
+  <body>
+    <h1>My first contact form</h1>
+    <br /><br />
+    <fieldset>
+      <legend>Contacts Inputs</legend>
+
+      <form style="text-align: center" onsubmit="return false">
+        <input type="text" placeholder="Enter your name" id="name" />
+        <input type="email" placeholder="Enter your email" id="email" />
+        <input
+          type=
+          placeholder="Enter the phone number"
+          id="phone"
+        />
+        <br /><br />
+        <button id="addContact">Add Contact</button>
+        <button id="removeContact">Remove contact</button>
+        <button id="editContact">Edit contact</button>
+        <button id="getContact">Get contact</button>
+        <button id="getAllContacts">Get all contacts</button>
+      </form>
+    </fieldset>
+
+    <fieldset style="text-align: center">
+      <legend>Contacts Output</legend>
+      <table>
+        <tr>
+          <td>id</td>
+          <td>name</td>
+          <td>email</td>
+          <td>phone</td>
+        </tr>
+        <tbody id="myTable"></tbody>
+      </table>
+    </fieldset>
+
+    <script src="script.js"></script>
+  </body>
+</html>
