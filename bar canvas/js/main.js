@@ -91,4 +91,4 @@ function drawBar(  ){
    
 }
 
-//drawBar(  )
+drawBar(  )
