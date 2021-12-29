@@ -56,7 +56,7 @@ function drawBar(  ){
     //subjectsValues.forEach( subject =>  subjectData[subject.name] = subject.value );
     
  
-    /*
+    
     // Subject data
     let subjectData = {};
     //let canvas       = document.getElementById("bar");
@@ -87,8 +87,8 @@ function drawBar(  ){
         
     }
 
-*/
+
    
 }
 
-drawBar(  )
+//drawBar(  )
